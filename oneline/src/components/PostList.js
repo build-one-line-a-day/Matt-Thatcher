@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { List, Segment } from 'semantic-ui-react'
+import Axios from 'axios'
+
+
+// https://my-json-server.typicode.com/mmthatch12/Oneline-fake-data
 
 export default function PostList() {
+    const[postList, setPostList] = useState([])
+
+    useEffect(() => {
+        Axios
+            .get(`https://my-json-server.typicode.com/mmthatch12/Oneline-fake-data`)
+            .then(response => {
+                const theInfo = response.data.posts
+                setPostList(theInfo)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }, [])
+
+
+
     return (
         <Segment inverted>
             <List divided inverted relaxed>
