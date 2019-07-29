@@ -25,7 +25,6 @@ export default function PostList() {
 
     return (
         <div>
-            <h1>What is going on?</h1>
             {postList.map(post => {
                 return (
                     <PostCard 

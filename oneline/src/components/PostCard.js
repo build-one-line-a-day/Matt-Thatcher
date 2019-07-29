@@ -1,19 +1,24 @@
 import React from 'react';
-import { List, Segment } from 'semantic-ui-react'
+import styled from 'styled-components'
+import '../App.css';
+
+const Title = styled.h2`
+    font-family: 'Open Sans';
+`;
+
+const Content = styled.p`
+    font-family: 'Montserrat'
+`;
+
 
 
 export default function PostCard({ date, title }) {
     return(
-        <Segment inverted>
-            <List divided inverted relaxed>
-                <List.Item>
-                    <List.Content>
-                        <List.Header>{date}</List.Header>
-                        {title}
-                    </List.Content>
-                </List.Item>
-            </List>
-        </Segment>
+        <div>
+            <Title>{date}</Title>
+            <Content>{title}</Content>
+        </div>
+
     )
 
 }
