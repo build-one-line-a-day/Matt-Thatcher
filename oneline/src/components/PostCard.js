@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { List, Segment } from 'semantic-ui-react'
 
 <Segment inverted>
     <List divided inverted relaxed>
