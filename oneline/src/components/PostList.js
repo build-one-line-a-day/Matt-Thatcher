@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios'
+import { route } from 'react-router-dom'
+import PostSingle from './PostSingle'
 
 import PostCard from './PostCard'
 
@@ -33,6 +35,8 @@ export default function PostList() {
                     />
                 )
             })}
+            
+            <route path="/post/:id" component={PostSingle} />
         </div>
     )
 }
