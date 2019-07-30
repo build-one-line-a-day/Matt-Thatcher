@@ -2,6 +2,12 @@ import React from 'react';
 import styled from 'styled-components'
 import '../App.css';
 
+const PostCardDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+`;
+
 const Title = styled.h2`
     font-family: 'Open Sans';
 `;
@@ -12,12 +18,14 @@ const Content = styled.p`
 
 
 
+
+
 export default function PostCard({ date, title }) {
     return(
-        <div>
+        <PostCardDiv>
             <Title>{date}</Title>
             <Content>{title}</Content>
-        </div>
+        </PostCardDiv>
 
     )
 
